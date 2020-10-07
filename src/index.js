@@ -69,7 +69,7 @@ let render = () => {
         <li class="site"  data-id=${index}>
         <span class="delete" data-id=${index}>
         <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-del"></use>
+        <use href="#icon-del"></use>
         </svg>
         </span>
         <a href="${ item.href}">
@@ -90,7 +90,7 @@ let render = () => {
             ` <li class="blog">
           <span class="delete" data-id=${index}>
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-del"></use>
+            <use href="#icon-del"></use>
           </svg>
         </span>
         <a href="${item.href}">
