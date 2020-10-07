@@ -47,8 +47,15 @@
     transform: rotate(45deg) translateY(50px);
 }
 
+
 body {
     min-width: 500px;
+}
+
+@media(max-width:500px) {
+    body {
+        min-width: 0;
+    }
 }
 
 .searchHead {
@@ -87,7 +94,7 @@ body {
     height: 40px;
     background-color: rgba(251, 188, 5, 0.5);
     border-radius: 4px;
-    max-width: 760px;
+
 }
 
 @media (max-width: 500px) {
@@ -95,6 +102,14 @@ body {
     .nav,
     main {
         margin: 20px;
+    }
+}
+
+@media (min-width: 500px) {
+
+    .nav,
+    main {
+        max-width: 760px;
     }
 }
 
@@ -119,7 +134,12 @@ body {
 
 main {
     margin: 20px auto;
-    max-width: 800px;
+}
+
+@media (min-width:500px) {
+    main {
+        max-width: 800px;
+    }
 }
 
 main .siteLists {
