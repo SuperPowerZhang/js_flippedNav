@@ -1,0 +1,43 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+button {
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+
+    outline: none;
+
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
