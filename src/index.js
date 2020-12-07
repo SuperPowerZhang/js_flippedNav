@@ -1,13 +1,55 @@
-let sitesDefault = [{
-    logo: "C",
-    href: "https://blog.csdn.net",
-    note: "CSDN博客平台"
-}, {
+let sitesDefault = [ {
     logo: "Y",
     href: "https://www.yuque.com",
-    note: "语雀，专业的云端知识库，为知识创作而生"
-}]
+    note: "语雀，云端知识库"
+}, {
+        logo: "G",
+        href: "https://github.com/",
+        note: "Github，代码托管平台"
+    },   {
+        logo: "D",
+        href: "https://devdocs.io/offline",
+        note: "Devtools，技术文档查询"
+    },
+    {
+        logo: "M",
+        href: "https://developer.mozilla.org/zh-CN/docs/Web/HTML",
+        note: "MDN，开发者文档社区"
+    },{
+        logo: "V",
+        href: "https://v3.vuejs.org/guide/introduction.html",
+        note: "Vue3，官方文档"
+    },{
+        logo: "R",
+        href: "https://react.docschina.org/",
+        note: "React，官方文档"
+    },{
+        logo: "N",
+        href: "http://nodejs.cn/api/",
+        note: "Node.js，官方API文档"
+    },{
+        logo: "P",
+        href: "https://codepen.io/",
+        note: "CODEPEN，前端作品分享"
+    },    {
+        logo: "T",
+        href: "https://trends.builtwith.com/javascript/jQuery",
+        note: "Trnds，技术趋势查询"
+    },{
+        logo: "C",
+        href: "https://blog.csdn.net",
+        note: "CSDN博客平台"
+    },{
+        logo: "S",
+        href: "https://sockboom.art/auth/login",
+        note: "SockBoom，付费科学上网"
+    },]
+
 let blogsDefault = [{
+    href: "https://www.yuque.com/damingzhangwuji/ugpugz/batwya",
+    title: "你不知道的JavaScript—上卷",
+    info: "两章，一：作用域和闭包，二：this和对象原型。"
+},{
     href: "https://blog.csdn.net/qq_40029828/article/details/108920762",
     title: "#再读JS# （6）jQuery设计思想",
     info: "jQuery的基本设计思想和主要用法，就是&quot选择某个网页元素，然后对其进行某种操作&quot。"
@@ -15,6 +57,38 @@ let blogsDefault = [{
     href: "https://blog.csdn.net/qq_40029828/article/details/108858868",
     title: "#再读JS# （5）JS世界",
     info: "__proto__用于存放共有属性的对象的地址，等同于其构造函数的prototype的地址"
+}, {
+    href: "https://blog.csdn.net/qq_40029828/article/details/109143844",
+    title: "Webpack 打怪升级",
+    info: "学习webpack的经验总结，对配置及插件的理解"
+},{
+    href: "https://juejin.cn/post/6844903704437456909",
+    title: "阅读源码后，来讲讲React Hooks是怎么实现的",
+    info: "React Hooks实现"
+},{
+    href: "https://www.ituring.com.cn/article/66566",
+    title: "【翻译】Promises/A+规范",
+    info: "一个开放、健全且通用的 JavaScript Promise 标准。由开发者制定，供开发者参考。"
+},{
+    href: "https://juejin.cn/post/6844903704437456909",
+    title: "前端MVC变形记",
+    info: "前端架构设计模式演变"
+},{
+    href: "https://segmentfault.com/a/1190000004114594",
+    title: "为什么说DOM操作很慢",
+    info: "浏览器渲染引擎过程"
+},{
+    href: "https://www.zhihu.com/question/330112288/answer/744362539",
+    title: "哈希表",
+    info: "哈希表复杂度和解决冲突的办法"
+},{
+    href: "https://bonsaiden.github.io/JavaScript-Garden/zh/",
+    title: "JS秘密花园",
+    info: "主要关心JavaScript 一些古怪用法的文档"
+},{
+    href: "https://juejin.cn/post/6844903582538399752",
+    title: "Event Loop、计时器、nextTick",
+    info: "Node.js事件循环"
 }]
 let listUl = $(".siteLists")
 let listBlogs = $(".blogList")
@@ -152,7 +226,6 @@ $("#lovedBlogs").on("click", () => {
 })
 //添加键盘事件，鼠标按下已有网站的logo的键时，直接跳转对应网站
 $(document).keypress((e) => {
-    console.log(e.key.toUpperCase())
     siteList.forEach((item, index) => {
         if (item.logo === e.key.toUpperCase()) {
             window.open(item.href, "_blank")

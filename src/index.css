@@ -77,6 +77,7 @@ body {
     border-radius: 4px;
     margin: 0 10px 0 0;
     border: 1px solid rgb(66, 133, 244);
+    padding:8px;
 }
 
 .searchHead button {
